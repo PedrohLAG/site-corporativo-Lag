@@ -1,0 +1,251 @@
+/* style.css */
+
+/* Importação de fontes do Google (Roboto e Montserrat) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@400;700&display=swap');
+
+/* Estilos globais e reset básico */
+body {
+    font-family: 'Roboto', sans-serif; /* Fonte principal */
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8; /* Fundo cinza bem claro */
+    color: #333; /* Texto principal cinza escuro */
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px; /* Largura máxima do conteúdo */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Cabeçalho --- */
+header {
+    background-color: #ffffff; /* Fundo branco */
+    color: #333;
+    padding: 15px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Sombra sutil */
+    position: sticky; /* Cabeçalho fixo ao rolar */
+    top: 0;
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+}
+
+header .container {
+    display: flex; /* Para alinhar logo e navegação */
+    justify-content: space-between; /* Espaço entre eles */
+    align-items: center; /* Alinhamento vertical */
+}
+
+.logo {
+    font-family: 'Montserrat', sans-serif; /* Fonte para o logo */
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #0056b3; /* Cor institucional para o logo */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Para alinhar itens do menu */
+}
+
+nav ul li {
+    margin-left: 30px; /* Espaçamento entre os itens do menu */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #555; /* Cor do texto do menu */
+    font-weight: 500;
+    transition: color 0.3s ease; /* Transição suave na cor */
+}
+
+nav ul li a:hover {
+    color: #007bff; /* Cor ao passar o mouse */
+}
+
+/* --- Seções de Conteúdo --- */
+.section-padded {
+    padding: 60px 0; /* Padding superior e inferior para seções */
+    margin-bottom: 0; /* Remove margem padrão */
+}
+
+.bg-light {
+    background-color: #f0f3f5; /* Fundo cinza claro para seções alternadas */
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif; /* Fonte para títulos */
+    color: #0056b3; /* Cor institucional para títulos */
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2.2em;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 1.6em;
+    font-weight: 600;
+    color: #333;
+}
+
+p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    text-align: center; /* Alinhamento central para parágrafos padrão */
+}
+
+/* Seção Hero (Banner principal) */
+.hero-section {
+    background-color: #007bff; /* Azul primário */
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero-section p {
+    font-size: 1.3em;
+    max-width: 800px;
+    margin: 20px auto 40px auto;
+}
+
+/* Botão de Chamada para Ação (CTA) */
+button {
+    background-color: #28a745; /* Verde de sucesso */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px; /* Botão arredondado */
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 700;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block; /* Para centralizar facilmente */
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #218838; /* Verde mais escuro ao passar o mouse */
+    transform: translateY(-2px); /* Pequeno efeito de elevação */
+}
+
+/* Grid de Soluções */
+.solutions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Colunas responsivas */
+    gap: 30px; /* Espaçamento entre os itens */
+    margin-top: 40px;
+}
+
+.solution-item {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.solution-item:hover {
+    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+}
+
+.solution-item h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #0056b3;
+}
+
+.solution-item p {
+    font-size: 1em;
+    text-align: left; /* Alinhamento de texto normal dentro do item */
+}
+
+/* Links de Download */
+#downloads ul {
+    list-style: none;
+    padding: 0;
+    text-align: center; /* Centraliza a lista de downloads */
+    margin-top: 30px;
+}
+
+#downloads ul li {
+    margin-bottom: 15px;
+}
+
+#downloads ul li a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+#downloads ul li a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.nota-downloads {
+    font-size: 0.9em;
+    color: #777;
+    margin-top: 20px;
+}
+
+/* Informações de Contato */
+.contact-info {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.contact-info a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Mensagem dinâmica do JavaScript */
+.mensagem-dinamica {
+    font-style: italic;
+    color: #777;
+    margin-top: 25px;
+    text-align: center;
+    font-size: 0.95em;
+}
+
+/* --- Rodapé --- */
+/*feito com ajuda do gemini*/
+footer {
+    background-color: #333; /* Fundo escuro */
+    color: #bbb;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+footer .container {
+    padding: 0 20px;
+}
+
+footer p {
+    margin: 0;
+    text-align: center;
+}
